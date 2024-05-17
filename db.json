@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "e34c",
+      "username": "sss"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "66da",
+      "Text": "Antoni Bogado",
+      "user": "sss",
+      "userNumber": "04123320947"
+    },
+    {
+      "id": "b0a1",
+      "Text": "Hansel Abogado",
+      "user": "sss",
+      "userNumber": "04123320947"
+    }
+  ]
+}

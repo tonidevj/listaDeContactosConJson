@@ -1,0 +1,313 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+/* cuerpo, pagina entera */
+body{
+  background-color: #4b5563;
+}
+
+/* titulo */
+.titlee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titlee{
+  font-size: 1.4rem;
+  color: #ccc;
+}
+p{
+  color: #e5e7eb;
+}
+
+/* contenerdor entero */
+
+body { /* o el contenedor padre de #max-container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#max-container{
+  background-color: #1e293b;
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+}
+/* contenedor del form del formulario principal */
+#form-container {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start; 
+  width: 100%;
+  padding: 1rem;
+ }
+
+/*inputs de los nombre y apellidos*/
+label {
+  color: white;
+}
+
+/* Campos de entrada */
+input[type=text]{ /* use esto para que se aplique al campo de entrada*/
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+
+/* Botón de formulario */
+#form-btn {
+  background-color: #4b5563;
+  color: wheat;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#form-btn:hover{
+  color: solid white;
+}
+
+/* boton de cerrar sesion */
+
+#sesion-off{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#off{
+  background-color: rgb(8, 8, 99);
+  width: 10rem;
+  height: 4rem;
+  border-radius: 1rem;
+  color: #ccc;
+
+}
+ #off:hover{
+cursor: pointer;
+background-color: rgb(34, 34, 90);
+ }
+/* lista de los contactos como tal */
+.contactos{
+  display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 200px;
+    overflow: auto;
+}
+
+#list{
+  padding: 0;
+  max-width: 100%; 
+  overflow-x: hidden;
+
+}
+
+li {
+ list-style-type: none;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+ gap: 1rem;
+ word-break: break-all;
+ border: 1px solid #494848;
+ width: 100%;
+}
+
+
+
+/* botones */
+
+.delete-btn{
+  background-color: rgba(255, 4, 4, 0.651);
+}
+
+.delete-btn > .delete-icon {
+  width: 2rem;
+  height: 2rem;
+}
+.delete-btn:hover{
+  cursor: pointer;
+}
+
+.edit-btn > .edit-icon {
+  width: 2rem;
+  height: 2rem;
+}
+.edit-btn:hover{
+  cursor: pointer;
+}
+
+#form-btn > .save-icon{
+  width: 2rem;
+  height: 2rem;
+}
+
+.info {
+  display: none;
+  color: #e5e7eb;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  background-color: rgba(255, 0, 0, 0.521);
+  padding: 0.5rem;
+border-radius: 1rem;
+}
+
+input {
+  outline: none;
+  border: 2px solid black;
+  border-radius: 1rem;
+}
+
+.correct {
+  outline: 2px solid green;
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.incorrect {
+  outline: 2px solid red;
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.show-info {
+  display: block;
+}
+
+
+.edit-btn.active {
+  background-color: yellow; /* Cambia el color de fondo a amarillo cuando se activa */
+}
+
+
+/* empezamos con los @media */
+
+/* en portatil */
+@media (min-width: 767px) {
+  #max-container{ width: 71vw;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e293b;
+  }
+  h1{
+    font-size: 2.5rem;
+  }
+  label{
+    font-size: 1.5rem;
+  }
+  p{
+    font-size: 1.3rem;
+  }
+  }
+
+
+  /* portatil 1024 */
+
+  @media (min-width: 1024px) {
+    #max-container{ width: 80vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e293b;
+    }
+    h1{
+      font-size: 3rem;
+    }
+    label{
+      font-size: 1.5rem;
+    }
+    p{
+      font-size: 1.3rem;
+    }
+    }
+
+
+    /* partili 1440 */
+
+    @media (min-width: 1440px) {
+      #max-container{ width: 80vw;
+      justify-content: center;
+      align-items: center;
+      background-color: #1e293b;
+      }
+      .contactos{
+        max-height: 300px;
+      }
+      h1{
+        font-size: 5rem;
+      }
+      label{
+        font-size: 3rem;
+      }
+      p{
+        font-size: 2rem;
+      }
+      input{
+        font-size: large;
+      }
+      .edit-btn{
+        width: 4vw;
+        height: 6vw;
+      }
+      .delete-btn{
+        width: 4vw;
+        height: 6vw;
+      }
+      #form-btn{
+        height: 3vw;
+      }
+      }
+
+      /* 4k */
+
+      @media (min-width: 2560px) {
+        #max-container{ width: 80vw;
+        justify-content: center;
+        align-items: center;
+        background-color: #1e293b;
+  
+        }
+        .contactos{
+          max-height: 700px;
+        }
+        h1{
+          font-size: 7rem;
+        }
+        label{
+          font-size: 4rem;
+        }
+        input{
+          font-size: 2vw;
+        }
+        p{
+          font-size: 4rem;
+        }
+        .edit-btn{
+          width: 4vw;
+          height: 6vw;
+        }
+        .delete-btn{
+          width: 4vw;
+          height: 6vw;
+        }
+        #form-btn{
+          height: 3vw;
+        }
+        }
